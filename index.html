@@ -1,0 +1,179 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>Hakata No Shio</title>
+<style>
+body {
+	text-align:center;
+}
+#chara {
+	color:blue;
+	text-align:justify;
+	text-align-last:justify;
+	margin:auto;
+	padding-left:100px;
+	padding-right:100px;
+	padding-top:0px;
+	padding-bottom:0px;
+	background-color:pink;
+	width:60%;
+	height: 10%;
+	border-radius:10px;
+	font-size:30px;
+}
+#space {
+	color:blue;
+	text-align:center;
+	margin:auto;
+	padding-left:100px;
+	padding-right:100px;
+	padding-top:0px;
+	padding-bottom:0px;
+	background-color:pink;
+	width:60%;
+	height: 10%;
+	border-radius:10px;
+	font-size:30px;
+}
+li {
+	list-style-type:none;
+}
+#button {
+	display:inline-block;
+	margin:10px;
+	width:100%;
+}
+button {
+	width:140px;
+	height:140px;
+	margin:29px;
+	font-size:40px;
+	color:black;
+	background-color:white;
+	border:solid 10px;
+	border-color: #ff0000;
+	border-radius:20px;
+	transition:0.1s;
+}
+button:hover {
+	width:140px;
+	height:140px;
+	margin:29px;
+	font-size:40px;
+	color:black;
+	background-color:#00ffff;
+	border:solid 10px;
+	border-color: #ff0000;
+	border-radius:20px;
+}
+#main {
+	width:1000px;
+	height:200px;
+}
+#speed button{
+color:gray;
+width:200px;
+}
+</style>
+</head>
+<body>
+<div id="chara">
+<li> <span>A</span> <span>S</span> <span>D</span> <span>F</span> <span>G</span> </li>
+</div>
+<div id="button">
+<button onClick="ha()">は</button>
+<button onClick="ka()">か</button>
+<button onClick="ta()">た</button>
+<button onClick="no()">の</button>
+<button onClick="sio()">しお</button>
+</div>
+<div>
+	<button onClick="hakatanosio()" id="main">は！か！た！の！しお！</button>
+</div>
+<div id="space">
+<li> <span>Space</span></li>
+</div>
+<div id="speed">
+	<button onClick="five()">0.5倍速</button>
+	<button onClick="eight()">0.8倍速</button>
+	<button onClick="tf()">1.25倍速</button>
+</div>
+<audio id="ha_audio">
+    <source src="./ha.mp3" type="audio/mp3">
+</audio>
+<audio id="ka_audio">
+    <source src="./ka.mp3" type="audio/mp3">
+</audio>
+<audio id="ta_audio">
+    <source src="./ta.mp3" type="audio/mp3">
+</audio>
+<audio id="no_audio">
+    <source src="./no.mp3" type="audio/mp3">
+</audio>
+<audio id="sio_audio">
+    <source src="./sio.mp3" type="audio/mp3">
+</audio>
+<audio id="main_audio">
+    <source src="./hakatanoshio.mp3" type="audio/mp3">
+</audio>
+<audio id="five_audio">
+    <source src="./five.mp3" type="audio/mp3">
+</audio>
+<audio id="eight_audio">
+    <source src="./eight.mp3" type="audio/mp3">
+</audio>
+<audio id="tf_audio">
+    <source src="./tf.mp3" type="audio/mp3">
+</audio>
+</body>
+<script type="text/javascript">
+window.addEventListener('DOMContentLoaded', function(){
+  window.addEventListener("keypress", function(e){
+    if(e.key === "a") {ha()}
+	else if(e.key === "s") {ka()}
+	else if(e.key === "d") {ta()}
+	else if(e.key === "f") {no()}
+	else if(e.key === "g") {sio()}
+	else if(e.key === " ") {hakatanosio()}
+	else {return;}
+  });
+});
+function ha() {
+    document.getElementById('ha_audio').currentTime = 0;
+    document.getElementById('ha_audio').play();
+}
+function ka() {
+    document.getElementById('ka_audio').currentTime = 0;
+    document.getElementById('ka_audio').play();
+}
+function ta() {
+    document.getElementById('ta_audio').currentTime = 0;
+    document.getElementById('ta_audio').play();
+}
+function no() {
+    document.getElementById('no_audio').currentTime = 0;
+    document.getElementById('no_audio').play();
+}
+function sio() {
+    document.getElementById('sio_audio').currentTime = 0;
+    document.getElementById('sio_audio').play();
+}
+function hakatanosio() {
+    document.getElementById('main_audio').currentTime = 0;
+    document.getElementById('main_audio').play();
+}
+function five() {
+    document.getElementById('five_audio').currentTime = 0;
+    document.getElementById('five_audio').play();
+}
+function eight() {
+    document.getElementById('eight_audio').currentTime = 0;
+    document.getElementById('eight_audio').play();
+}
+function tf() {
+    document.getElementById('tf_audio').currentTime = 0;
+    document.getElementById('tf_audio').play();
+}
+</script>
+</html>
