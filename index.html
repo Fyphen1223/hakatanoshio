@@ -3,9 +3,13 @@
 <head>
 	<meta charset="utf-8">
 	<title>Hakata No Shio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
 <style>
 body {
 	text-align:center;
+	font-family: 'Mochiy Pop P One', sans-serif;
 }
 #chara {
 	color:blue;
@@ -21,6 +25,7 @@ body {
 	height: 10%;
 	border-radius:10px;
 	font-size:30px;
+	font-family: 'Mochiy Pop P One', sans-serif;
 }
 #space {
 	color:blue;
@@ -35,6 +40,7 @@ body {
 	height: 10%;
 	border-radius:10px;
 	font-size:30px;
+	font-family: 'Mochiy Pop P One', sans-serif;
 }
 li {
 	list-style-type:none;
@@ -45,22 +51,23 @@ li {
 	width:100%;
 }
 button {
-	width:140px;
-	height:140px;
+	width:150px;
+	height:150px;
 	margin:29px;
-	font-size:40px;
+	font-size:60px;
 	color:black;
 	background-color:white;
 	border:solid 10px;
 	border-color: #ff0000;
 	border-radius:20px;
 	transition:0.1s;
+	font-family: 'Mochiy Pop P One', sans-serif;
 }
 button:hover {
-	width:140px;
-	height:140px;
+	width:150px;
+	height:150px;
 	margin:29px;
-	font-size:40px;
+	font-size:60px;
 	color:black;
 	background-color:#00ffff;
 	border:solid 10px;
@@ -73,7 +80,8 @@ button:hover {
 }
 #speed button{
 color:gray;
-width:200px;
+width:300px;
+font-size:50px;
 }
 </style>
 </head>
@@ -99,6 +107,8 @@ width:200px;
 	<button onClick="eight()">0.8倍速</button>
 	<button onClick="tf()">1.25倍速</button>
 </div>
+<footer>Inspired from  AZ FLASH 「伯方の塩ボタン」</footer>
+<noscript>JavaScriptを有効化してください。</noscript>
 <audio id="ha_audio">
     <source src="./ha.mp3" type="audio/mp3">
 </audio>
