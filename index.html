@@ -139,49 +139,62 @@ font-size:50px;
 </body>
 <script type="text/javascript">
 window.addEventListener('DOMContentLoaded', function(){
-  window.addEventListener("keypress", function(e){
+  var key_input = new Array;
+  window.addEventListener("keypress", async function(e){
+    e.preventDefault();
     if(e.key === "a") {ha()}
-	else if(e.key === "s") {ka()}
-	else if(e.key === "d") {ta()}
-	else if(e.key === "f") {no()}
-	else if(e.key === "g") {sio()}
-	else if(e.key === " ") {hakatanosio()}
+	else if(e.key === "s") {await ka()}
+	else if(e.key === "d") {await ta()}
+	else if(e.key === "f") {await no()}
+	else if(e.key === "g") {await sio()}
+	else if(e.key === " ") {await hakatanosio()}
 	else {return;}
   });
+  window.addEventListener("keydown", function(e){
+    key_input.push(e.key);
+  });
+
+  window.addEventListener("keyup", function(e){
+    if( 0 < key_input.length ) {
+      console.log(key_input);
+      key_input = new Array();
+    }
+  });
 });
-function ha() {
+
+async function ha() {
     document.getElementById('ha_audio').currentTime = 0;
     document.getElementById('ha_audio').play();
 }
-function ka() {
+async function ka() {
     document.getElementById('ka_audio').currentTime = 0;
     document.getElementById('ka_audio').play();
 }
-function ta() {
+async function ta() {
     document.getElementById('ta_audio').currentTime = 0;
     document.getElementById('ta_audio').play();
 }
-function no() {
+async function no() {
     document.getElementById('no_audio').currentTime = 0;
     document.getElementById('no_audio').play();
 }
-function sio() {
-    document.getElementById('sio_audio').currentTime = 0;
+async function sio() {
+	document.getElementById('sio_audio').currentTime = 0;
     document.getElementById('sio_audio').play();
 }
-function hakatanosio() {
+async function hakatanosio() {
     document.getElementById('main_audio').currentTime = 0;
     document.getElementById('main_audio').play();
 }
-function five() {
+async function five() {
     document.getElementById('five_audio').currentTime = 0;
     document.getElementById('five_audio').play();
 }
-function eight() {
+async function eight() {
     document.getElementById('eight_audio').currentTime = 0;
     document.getElementById('eight_audio').play();
 }
-function tf() {
+async function tf() {
     document.getElementById('tf_audio').currentTime = 0;
     document.getElementById('tf_audio').play();
 }
