@@ -2,4 +2,5 @@
 This project was intended to provide fully working copy of AZ Flash's 伯方の塩ボタン.
 
 # Copyrights
-You can copy, edit, use, or spread this project.
+
+Any copyrights are on AZ Flash.
